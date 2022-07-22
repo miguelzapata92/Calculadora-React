@@ -4,7 +4,11 @@ function App() {
   return (
     <div className="App">
         <div className='contenedor-calculadora'>
-          Hola
+          <div className='fila'></div>
+          <div className='fila'></div>
+          <div className='fila'></div>
+          <div className='fila'></div>
+          <div className='fila'></div>
         </div>
         
     </div>
