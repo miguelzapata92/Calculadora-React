@@ -1,10 +1,11 @@
 import './App.css';
-import { Boton } from './components/boton';
-
+import { Boton } from './componentes/boton';
+import Pantalla  from './componentes/Pantalla.jsx';
 function App() {
   return (
     <div className="App">
         <div className='contenedor-calculadora'>
+          <Pantalla/>
           <div className='fila'>
             <Boton>1</Boton>
             <Boton>2</Boton>
