@@ -7,11 +7,10 @@ export function Boton(props){
         return isNaN(valor) && (valor != '.') && (valor != '=');
     }
 
-
-
     return (
         <div
-            className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}>
+            className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
+            onClick={() => props.manejarClick(props.children)}>
             {props.children}
         </div>
     )
