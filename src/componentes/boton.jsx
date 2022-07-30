@@ -4,8 +4,8 @@ import '../hojas-de-estilo/boton.css';
 export function Boton(props){
 
     const esOperador = valor => {
-        return isNaN(valor) && (valor != '.') && (valor != '=');
-    }
+        return isNaN(valor) && (valor !== '.') && (valor !== '=');
+    };
 
     return (
         <div
@@ -13,5 +13,5 @@ export function Boton(props){
             onClick={() => props.manejarClick(props.children)}>
             {props.children}
         </div>
-    )
+    );
 }

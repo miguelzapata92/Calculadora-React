@@ -10,16 +10,25 @@ function App() {
   const [input, setInput] = useState('');
 
   const agregarInput = val => {
+
     setInput(input + val);
   };
 
   const limpiarInput = () => {
     setInput('')
-  }
+  };
+
+
 
   const calcularResultado = () => {
-    setInput(evaluate(input))
-  }
+
+    if(input) {
+      setInput(evaluate(input))
+    } else {
+      setInput('')
+    };
+    
+  };
   return (
     <div className="App">
         <div className='contenedor-calculadora'>

@@ -12,5 +12,6 @@
     padding-right: 30px;
     margin: 1px solid #888;
     box-shadow: -1px 4px 1px 1px white;
-    color:white
+    color:white;
+    user-select: none;
 }
