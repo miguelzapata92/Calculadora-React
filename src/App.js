@@ -3,7 +3,7 @@ import { Boton } from './componentes/boton';
 import Pantalla  from './componentes/Pantalla.jsx';
 import BotonClear from './componentes/BotonClear';
 import {useState} from 'react';
-
+import {evaluate} from 'mathjs'
 
 function App() {
 
@@ -13,6 +13,13 @@ function App() {
     setInput(input + val);
   };
 
+  const limpiarInput = () => {
+    setInput('')
+  }
+
+  const calcularResultado = () => {
+    setInput(evaluate(input))
+  }
   return (
     <div className="App">
         <div className='contenedor-calculadora'>
@@ -35,16 +42,16 @@ function App() {
             <Boton manejarClick={agregarInput}>7</Boton>
             <Boton manejarClick={agregarInput}>8</Boton>
             <Boton manejarClick={agregarInput}>9</Boton>
-            <Boton manejarClick={agregarInput}>x</Boton>
+            <Boton manejarClick={agregarInput}>*</Boton>
           </div>
           <div className='fila'>
-            <Boton>=</Boton>
-            <Boton>0</Boton>
-            <Boton>.</Boton>
-            <Boton>/</Boton>
+            <Boton manejarClick={calcularResultado}>=</Boton>
+            <Boton manejarClick={agregarInput}>0</Boton>
+            <Boton manejarClick={agregarInput}>.</Boton>
+            <Boton manejarClick={agregarInput}>/</Boton>
           </div>
           <div className='fila'>
-             <BotonClear>Clear</BotonClear>
+             <BotonClear manejarClear={limpiarInput}>Clear</BotonClear>
           </div>
         </div>
         
